@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "plugin-bye-iq",
   "scripts": {
-    "type-check": "tsc --noEmit",
+    "type-check": "tsc",
     "type-check:watch": "yarn type-check -- --watch",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "rollup -c",
@@ -19,10 +19,23 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-typescript": "^7.3.3",
+    "husky": "^3.0.2",
+    "lint-staged": "^8.2.1",
     "rollup": "^1.18.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.1",
     "rollup-plugin-node-resolve": "^5.2.0",
     "typescript": "^3.5.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn type-check",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
