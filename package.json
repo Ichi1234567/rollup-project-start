@@ -5,6 +5,7 @@
   "scripts": {
     "type-check": "tsc",
     "type-check:watch": "yarn type-check -- --watch",
+    "prettier-check": "prettier --parser typescript 'src/**/*.{ts,tsx}' --write",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "rollup -c",
     "build": "yarn build:types && yarn build:js"
@@ -21,6 +22,7 @@
     "@babel/preset-typescript": "^7.3.3",
     "husky": "^3.0.2",
     "lint-staged": "^8.2.1",
+    "prettier": "^1.18.2",
     "rollup": "^1.18.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.1",
@@ -29,6 +31,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
+      "yarn prettier-check",
       "yarn type-check",
       "git add"
     ]
