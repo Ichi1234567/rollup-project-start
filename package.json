@@ -1,0 +1,28 @@
+{
+  "name": "plugin-bye-iq",
+  "version": "0.0.1",
+  "description": "plugin-bye-iq",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "yarn type-check -- --watch",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "rollup -c",
+    "build": "yarn build:types && yarn build:js"
+  },
+  "main": "dist/rollup-plugin-babel.cjs.js",
+  "module": "dist/rollup-plugin-babel.esm.js",
+  "browser": "dist/rollup-plugin-babel.iife.js",
+  "types": "dist/types/index.d.ts",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "rollup": "^1.18.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "typescript": "^3.5.3"
+  }
+}
