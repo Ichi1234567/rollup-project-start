@@ -8,7 +8,7 @@
     "prettier-check": "prettier --parser typescript 'src/**/*.{ts,tsx}' --write",
     "jest": "TZ=Asia/Taipei jest",
     "jest:ci": "TZ=Asia/Taipei jest --coverage",
-    "build:types": "tsc --emitDeclarationOnly",
+    "build:types": "tsc --emitDeclarationOnly -p './tsconfig.types.json'",
     "build:js": "rollup -c",
     "build": "yarn build:types && yarn build:js"
   },

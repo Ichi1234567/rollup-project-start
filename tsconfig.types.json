@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "esnext",
+    "module": "esnext",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "outDir": "dist/types",
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "preserveConstEnums": true,
+    "allowJs": false,
+    "sourceMap": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "isolatedModules": false,
+    "noEmit": false,
+    "forceConsistentCasingInFileNames": true
+  },
+  "types": [
+    "jest"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/**/__tests__",
+  ],
+  "include": [
+    "src/**/*"
+  ]
+}
