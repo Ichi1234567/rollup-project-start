@@ -1,7 +1,7 @@
 {
-  "name": "plugin-bye-iq",
+  "name": "rollup-project-starter",
   "version": "0.0.1",
-  "description": "plugin-bye-iq",
+  "description": "rollup-project-starter",
   "scripts": {
     "type-check": "tsc",
     "type-check:watch": "yarn type-check -- --watch",
