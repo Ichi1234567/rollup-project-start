@@ -1,7 +1,7 @@
 {
-  "name": "rollup-project-starter",
+  "name": "mail-subscriber",
   "version": "0.0.1",
-  "description": "rollup-project-starter",
+  "description": "mail-subscriber",
   "scripts": {
     "type-check": "tsc",
     "type-check:watch": "yarn type-check -- --watch",
@@ -13,10 +13,9 @@
     "build:watch": "rollup -c -w",
     "build": "NODE_ENV=production yarn build:js && yarn build:types"
   },
-  "main": "dist/rollup-plugin-babel.cjs.js",
-  "module": "dist/rollup-plugin-babel.esm.js",
-  "browser": "dist/rollup-plugin-babel.iife.js",
+  "main": "dist/index",
   "types": "dist/types/index.d.ts",
+  "files": ["dist"],
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",

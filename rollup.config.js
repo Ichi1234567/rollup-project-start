@@ -1,13 +1,12 @@
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
-import pkg from './package.json';
 
 const extensions = [
   '.js', '.jsx', '.ts', '.tsx',
 ];
 
-const name = 'RollupTypeScriptBabel';
+const name = 'MailSubscriber';
 
 export default {
   input: './src/index.ts',
@@ -29,19 +28,8 @@ export default {
 
   output: [{
     // for both browser and node.js
-    file: pkg.main,
-    format: 'cjs',
-  }, {
-    // for node.js
-    file: pkg.module,
-    format: 'es',
-  }, {
-    // for browser
-    file: pkg.browser,
-    format: 'iife',
+    file: 'dist/index.js',
+    format: 'umd',
     name,
-
-    // https://rollupjs.org/guide/en#output-globals-g-globals
-    globals: {},
   }],
 };
