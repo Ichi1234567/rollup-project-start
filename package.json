@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "mail-subscriber",
   "scripts": {
-    "type-check": "tsc",
+    "type-check": "tsc --noEmit -p 'tsconfig.types.json'",
     "type-check:watch": "yarn type-check -- --watch",
     "prettier-check": "prettier --parser typescript 'src/**/*.{ts,tsx}' --write",
     "jest": "TZ=Asia/Taipei jest",
@@ -40,7 +40,6 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "yarn prettier-check",
-      "yarn type-check",
       "git add"
     ]
   },
