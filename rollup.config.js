@@ -17,7 +17,10 @@ export default {
 
   plugins: [
     // Allows node_modules resolution
-    resolve({ extensions }),
+    resolve({
+      extensions,
+      mainFields: ['jsnext', 'preferBuiltins', 'browser'],
+    }),
 
     // Allow bundling cjs modules. Rollup doesn't understand cjs
     commonjs(),
