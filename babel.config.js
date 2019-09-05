@@ -1,9 +1,14 @@
 module.exports = {
   presets: [
     [ '@babel/preset-env', {
+        modules: false,
+        spec: true,
+        forceAllTransforms: true,
+        useBuiltIns: 'usage',
+        corejs: 3,
         targets: {
           browsers: [
-            "cover 99.5%",
+            'cover 99.5%',
           ],
         },
       },
@@ -11,7 +16,7 @@ module.exports = {
     '@babel/preset-typescript',
   ],
   plugins: [
-    "@babel/plugin-proposal-class-properties",
+    '@babel/plugin-proposal-class-properties',
   ],
   env: {
     production: {
