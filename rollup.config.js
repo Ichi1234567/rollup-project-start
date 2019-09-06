@@ -6,7 +6,7 @@ const extensions = [
   '.js', '.jsx', '.ts', '.tsx',
 ];
 
-const name = 'MailSubscriber';
+const name = 'RollupStarter';
 
 export default {
   input: './src/index.ts',

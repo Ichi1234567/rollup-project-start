@@ -1,7 +1,7 @@
 {
-  "name": "mail-subscriber",
+  "name": "RollupStarter",
   "version": "0.0.1",
-  "description": "mail-subscriber",
+  "description": "project uses with rollup js",
   "scripts": {
     "type-check": "tsc --noEmit -p 'tsconfig.types.json'",
     "type-check:watch": "yarn type-check -- --watch",
