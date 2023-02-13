@@ -1,7 +1,7 @@
 module.exports = {
   presets: [
     [ '@babel/preset-env', {
-        modules: false,
+        modules: 'commonjs',
         spec: true,
         forceAllTransforms: true,
         useBuiltIns: 'usage',
